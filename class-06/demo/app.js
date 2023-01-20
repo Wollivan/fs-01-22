@@ -13,6 +13,4 @@ if (time <= 11) {
   message = "C'mon " + myName + ", that is not a valid time!";
 }
 
-console.log(message);
-
 document.write(message);
