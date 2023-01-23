@@ -1,0 +1,19 @@
+h1 {
+  font-family: Helvetica;
+}
+
+p {
+  color: red;
+}
+
+p.more-content {
+  background-color: #0000ff;
+}
+
+.more-content {
+  background-color: #ff0000;
+}
+
+#something-else {
+  border: 5px dashed #00ff00;
+}
