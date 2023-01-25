@@ -16,7 +16,7 @@ Be sure to follow these instructions **VERY** carefully.
 
 Note: Before starting these steps, make sure that both of your repositories are 'clean': in other words, everything is committed and pushed so that both the remote and local versions of your projects are in sync. This will prevent potential problems later.
 
-- Decide whose code you will work on first. The owner of that code (who will be the Navigator) provides the link to their GitHub repo to the other member of the pair (who will be the Driver). You can send this link over Slack.
+- Decide whose code you will work on first. The owner of that code (who will be the Navigator) provides the link to their GitHub repo to the other member of the pair (who will be the Driver). You can send this link over Discord.
 
 - The Driver follows the link to that repo and creates a fork of the repo in GitHub like we did in class.
 
