@@ -7,7 +7,7 @@ const person = {
   computerScientist: true,
   education: ["Vassar College", "Yale University"],
   walk: function() {
-    console.log(this.name + " is walking!");
+    console.log(this.name + " is walking!"); // contextual "this" refers to the object it is inside
   },
   birthplace: {
     date: "December 9 1906",
