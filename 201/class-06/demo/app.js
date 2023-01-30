@@ -67,4 +67,6 @@ article.appendChild(img);
 
 // object literals
 // bracket and dot notation
+// tim.name
+// tim["name"]
 // Math.random (and floor)
