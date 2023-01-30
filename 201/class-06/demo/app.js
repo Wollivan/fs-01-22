@@ -46,6 +46,7 @@ const p = document.createElement("p");
 p.textContent = frankie.name + " is adorable and is " + frankie.age + " old.";
 article.appendChild(p);
 
+// list of interests
 const ul = document.createElement("ul");
 article.appendChild(ul);
 
@@ -54,3 +55,16 @@ for (let i = 0; i < frankie.interests.length; i++) {
   li.textContent = frankie.interests[i];
   ul.appendChild(li);
 }
+
+// image
+const img = document.createElement("img");
+img.setAttribute("src", frankie.name + ".jpeg");
+img.setAttribute(
+  "alt",
+  "cute picture of ' + frankie.name + ', who is an orange and white cat. You should really adopt her."
+);
+article.appendChild(img);
+
+// object literals
+// bracket and dot notation
+// Math.random (and floor)
