@@ -15,6 +15,12 @@ const person = {
   }
 }
 
+// access using dot notation
+console.log(person.name);
+
+// or bracket notation
+console.log(person["name"]);
+
 // adds a proptery called serviceBranch
 person.serviceBranch = "Navy";
 
