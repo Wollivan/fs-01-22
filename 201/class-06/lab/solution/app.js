@@ -16,30 +16,71 @@ const seattle = {
       let numCust = randomNum(this.minCust, this.maxCust);
       this.custPerHour.push(numCust);
     }
-    this.calcCookiesPerHour();
   },
   calcCookiesPerHour: function () {
     for (let i = 0; i < this.custPerHour.length; i++) {
-      this.cookiesPerHour.push(Math.floor(this.custPerHour[i] * 6.3));
+      this.cookiesPerHour.push(Math.floor(this.custPerHour[i] * this.avgSale));
     }
   },
   render: function () {
     this.calcCustPerHour();
-    const seattleDiv = document.getElementById("seattle");
+    this.calcCookiesPerHour();
+
+    const div = document.getElementById(this.name);
 
     const h2 = document.createElement("h2");
-    h2.textContent = seattle.name;
-    seattleDiv.appendChild(h2);
+    h2.textContent = this.name;
+    div.appendChild(h2);
 
     const ul = document.createElement("ul");
-    seattleDiv.appendChild(ul);
+    div.appendChild(ul);
 
-    for (let i = 0; i < seattle.cookiesPerHour.length; i++) {
+    for (let i = 0; i < this.cookiesPerHour.length; i++) {
       const li = document.createElement("li");
-      li.textContent = seattle.cookiesPerHour[i] + " cookies";
+      li.textContent = this.cookiesPerHour[i] + " cookies";
       ul.appendChild(li);
-      console.log(seattle.cookiesPerHour[i]);
     }
   },
 };
+
+const tokyo = {
+  name: "Tokyo",
+  minCust: 3,
+  maxCust: 24,
+  avgSale: 1.2,
+  custPerHour: [],
+  cookiesPerHour: [],
+  calcCustPerHour: function () {
+    for (let i = 0; i < hours.length; i++) {
+      let numCust = randomNum(this.minCust, this.maxCust);
+      this.custPerHour.push(numCust);
+    }
+  },
+  calcCookiesPerHour: function () {
+    for (let i = 0; i < this.custPerHour.length; i++) {
+      this.cookiesPerHour.push(Math.floor(this.custPerHour[i] * this.avgSale));
+    }
+  },
+  render: function () {
+    this.calcCustPerHour();
+    this.calcCookiesPerHour();
+
+    const div = document.getElementById(this.name);
+
+    const h2 = document.createElement("h2");
+    h2.textContent = this.name;
+    div.appendChild(h2);
+
+    const ul = document.createElement("ul");
+    div.appendChild(ul);
+
+    for (let i = 0; i < this.cookiesPerHour.length; i++) {
+      const li = document.createElement("li");
+      li.textContent = this.cookiesPerHour[i] + " cookies";
+      ul.appendChild(li);
+    }
+  },
+};
+
 seattle.render();
+tokyo.render();
