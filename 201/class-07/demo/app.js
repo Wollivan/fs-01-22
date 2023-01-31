@@ -49,6 +49,44 @@ Kitten.prototype.render = function () {
     ulElem.appendChild(liElem);
   }
 
+  // Table time! (for the good withs)
+  const tableElem = document.createElement("table");
+  articleElem.appendChild(tableElem);
+
+  // hedaer row
+  const headerRow = document.createElement("tr");
+  tableElem.appendChild(headerRow);
+
+  // add header cells
+  const kidsHeaderCell = document.createElement("th");
+  const dogsHeaderCell = document.createElement("th");
+  const catsHeaderCell = document.createElement("th");
+
+  kidsHeaderCell.textContent = "Kids";
+  dogsHeaderCell.textContent = "Dogs";
+  catsHeaderCell.textContent = "Cats";
+
+  headerRow.appendChild(kidsHeaderCell);
+  headerRow.appendChild(dogsHeaderCell);
+  headerRow.appendChild(catsHeaderCell);
+
+  // add data row
+  const dataRow = document.createElement("tr");
+  tableElem.appendChild(dataRow);
+
+  // add data cells
+  const kidsDataCell = document.createElement("td");
+  const dogsDataCell = document.createElement("td");
+  const catsDataCell = document.createElement("td");
+
+  kidsDataCell.textContent = this.goodWithKids;
+  dogsDataCell.textContent = this.goodWithDogs;
+  catsDataCell.textContent = this.goodWithCats;
+
+  dataRow.appendChild(kidsDataCell);
+  dataRow.appendChild(dogsDataCell);
+  dataRow.appendChild(catsDataCell);
+
   // image
   const imgElem = document.createElement("img");
   imgElem.setAttribute("src", this.imageFilename);
