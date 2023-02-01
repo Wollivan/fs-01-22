@@ -1,0 +1,61 @@
+body {
+  font-family: "Open Sans", san-serif;
+}
+
+h1 {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#container {
+  background-color: #003049;
+  width: 90%;
+  height: 750px;
+  margin: 0 auto;
+  border: 5px solid #003049;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#container div {
+  width: 200px;
+  height: 200px;
+  color: #fff;
+  font-size: 2rem;
+  font-family: monospace;
+  text-shadow: 0 0 3px #000;
+  display: flex;
+  flex-wrap: wrap; /* allows the row/column to break into more than one row/column */
+  flex-direction: column; /* flips the x and y axis */
+  justify-content: center; /* effects the x-axis */
+  align-items: center; /* effects the y-axis */
+}
+
+#container div:nth-child(1) {
+  background-color: teal;
+}
+
+#container div:nth-child(2) {
+  background-color: salmon;
+}
+
+#container div:nth-child(3) {
+  background-color: aqua;
+}
+
+#container div:nth-child(4) {
+  background-color: orange;
+}
+
+#container div:nth-child(5) {
+  background-color: pink;
+}
+
+#container div:nth-child(6) {
+  background-color: turquoise;
+}
+
+#container div:nth-child(7) {
+  background-color: rgb(233, 79, 79);
+}
