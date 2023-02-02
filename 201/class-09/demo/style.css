@@ -1,0 +1,25 @@
+html,
+body {
+  background-color: cadetblue;
+  color: white;
+  font-family: monospace;
+}
+
+form {
+  width: 50%;
+  margin: 0 auto;
+}
+fieldset {
+  display: flex;
+  flex-direction: column;
+  border-color: white;
+}
+legend {
+  text-align: center;
+}
+input {
+  margin-bottom: 2rem;
+}
+label {
+  margin-top: 1rem;
+}
