@@ -1,0 +1,51 @@
+body {
+  width: 960px;
+  margin: 0 auto;
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  width: 760px;
+}
+
+section {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-height: 440px;
+  margin-left: 30px;
+}
+
+article p {
+  overflow-y: scroll;
+}
+
+button {
+  padding: 1rem 3rem;
+  width: 75%;
+  border-radius: 10px;
+  transition-duration: 0.35s;
+}
+
+button:hover {
+  background-color: teal;
+}
+
+footer {
+  background-color: #aaaaaa;
+  min-height: 200px;
+  margin-top: 30px;
+}

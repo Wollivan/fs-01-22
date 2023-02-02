@@ -59,9 +59,10 @@ function makeHeaderRow() {
   const tr = document.createElement("tr");
   table.appendChild(tr);
 
-  // starting cell
+  // empty cell to start
   let th = document.createElement("th");
   tr.appendChild(th);
+  
   // get data into the row
   for (let i = 0; i < hours.length; i++) {
     th = document.createElement("th");
