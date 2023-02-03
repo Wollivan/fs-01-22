@@ -99,4 +99,39 @@ for (let i = 0; i < stores.length; i++) {
   stores[i].render();
 }
 
-// solution for hourly totals, try for within a for
+function totalRow() {
+  // table
+  const table = document.getElementById("myTable");
+
+  // table row
+  const tr = document.createElement("tr");
+  table.appendChild(tr);
+
+  // table cell
+  let td = document.createElement("td");
+  td.textContent = "Totals";
+  tr.appendChild(td);
+  let fullTotal = 0;
+  // loop round every hour to get each hours total
+  for (let i = 0; i < hours.length; i++) {
+    let hourlyTotal = 0;
+
+    // loop through each store to help get the hours total
+    for (let k = 0; k < stores.length; k++) {
+      hourlyTotal = hourlyTotal + stores[k].cookiesPerHour[i];
+    }
+
+    // hoursly total cell
+    let td = document.createElement("td");
+    td.textContent = hourlyTotal;
+    tr.appendChild(td);
+
+    fullTotal = fullTotal + hourlyTotal;
+  }
+
+  // total total
+  td = document.createElement("td");
+  td.textContent = fullTotal;
+  tr.appendChild(td);
+}
+totalRow();
