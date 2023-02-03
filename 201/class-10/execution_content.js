@@ -8,9 +8,9 @@ function globalFunc() {
 function scopyFunc(doggy) {
   function privateFunc() {
     const privatelet = 'woof!';
-    return doggy + ' says ' + privateVar;
+    return doggy + ' says ' + privateLet;
   }
-  console.log(privateVar);
+  console.log(privateLet);
   console.log('doggy is only defined inside scopyFunc: ' + doggy );
   return privateFunc();
 }
