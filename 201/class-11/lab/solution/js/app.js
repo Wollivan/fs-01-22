@@ -2,6 +2,8 @@ function getRandomProductIndex() {
   return Math.floor(Math.random() * Product.allProducts.length);
 }
 
+let totalClicks = 0;
+const maxClicks = 10;
 function Product(name, src) {
   this.name = name;
   this.src = src;
@@ -63,5 +65,53 @@ function renderProducts() {
 
   img3.src = Product.allProducts[product3].src;
   img3.alt = Product.allProducts[product3].name;
+
+  // increase views for displayed images
+  Product.allProducts[product1].views++;
+  Product.allProducts[product2].views++;
+  Product.allProducts[product3].views++;
 }
+
+// listen for clicks on the images
+function handleClick(event) {
+  // make sure they are clicking on an image and not the container itself
+  if (event.target === imgContainer) {
+    alert("You've got to click on the image!");
+  } else {
+    totalClicks++;
+  }
+
+  // increase clicks
+  for (let i = 0; i < Product.allProducts.length; i++) {
+    if (Product.allProducts[i].name === event.target.alt) {
+      Product.allProducts[i].clicks++;
+      break; // ends the for loop
+    }
+  }
+
+  // check max clicks
+  if (totalClicks === maxClicks) {
+    // remove the event listener so the game ends
+    imgContainer.removeEventListener("click", handleClick);
+    // maybe rnder results?
+    renderResults();
+  } else {
+    renderProducts();
+  }
+}
+
+function renderResults() {
+  const resultsList = document.getElementById("results-list");
+
+  for (let i = 0; i < Product.allProducts.length; i++) {
+    let theProduct = Product.allProducts[i];
+    let li = document.createElement("li");
+    li.textContent = `${theProduct.name}: ${theProduct.clicks} clicks ${theProduct.views} views`;
+    resultsList.appendChild(li);
+  }
+}
+
+const imgContainer = document.getElementById("img-container");
+imgContainer.addEventListener("click", handleClick);
+
 renderProducts();
