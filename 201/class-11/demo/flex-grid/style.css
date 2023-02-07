@@ -11,9 +11,10 @@ main {
 
 /*-------- LAYOUT IN FLEX: --------*/
 
-.container {
+/* .container {
   border: 1px solid black;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .container div {
@@ -21,6 +22,7 @@ main {
   margin: 0.5rem;
   border: 1px solid black;
   flex: 1 1 20%;
+  height: 7rem;
 }
 
 div:nth-child(2) {
@@ -31,20 +33,20 @@ div:nth-child(2) {
 div:nth-child(4) {
   flex: 3 0 40%;
   background-color: skyblue;
-}
+} */
 
 /*-------- LAYOUT IN GRID: --------*/
-/* 
+
 .container {
   border: 1px solid black;
   display: grid;
-  grid-template-columns: 1fr 10% 1fr 40%;
+  grid-template-columns: 1fr 20% 1fr 40%;
   grid-template-rows: 14rem 3rem 6rem 6rem 6rem;
 }
 
 .container div {
   background-color: lightgray;
-  margin: .5rem;
+  margin: 0.5rem;
   border: 1px solid black;
 }
 
@@ -53,4 +55,4 @@ div:nth-child(4n + 2) {
 }
 div:nth-child(4n) {
   background-color: skyblue;
-} */
+}
