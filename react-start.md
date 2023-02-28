@@ -9,11 +9,11 @@ In your projects folder (or a different folder if you want your project somewher
 
 Delete the following files inside the src folder
 
-App.test.js
-Index.css
-Logo.svg
-Reportwebvitals.js
-setupTests.js
+- App.test.js
+- Index.css
+- Logo.svg
+- Reportwebvitals.js
+- setupTests.js
 
 Delete everything inside App.css
 
