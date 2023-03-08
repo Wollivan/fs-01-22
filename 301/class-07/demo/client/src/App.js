@@ -7,10 +7,10 @@ function App() {
 
   // function to retrieve shopping list data
   async function getShoppingList() {
-    const API = `http://localhost:8080?type=${searchQuery}`;
+    const API = `http://localhost:8080/shopping-list?type=${searchQuery}`;
     const res = await axios.get(API);
-
-    setLocation(res.data);
+    console.log(res.data);
+    setList(res.data);
   }
 
   function handleSearch(event) {
