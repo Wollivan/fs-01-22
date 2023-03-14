@@ -7,7 +7,7 @@ mongoose.connect(process.env.DATABASE_URL);
 
 async function seed() {
   // create a new isntacne of a cat object and add to the DB
-  await Cat.create({ name: "Dusty Blackwell", color: "black", hasClaws: true, location: "Norwich" });
+  await Cat.create({ name: "Guinness Hutton", color: "black & white", hasClaws: false, location: "The Wirral" });
   console.log("Created a new cat");
 
   mongoose.disconnect();
