@@ -15,11 +15,9 @@ mongoose.connect(process.env.DATABASE_URL);
 
 // READ
 app.get("/cats", async (request, response) => {
-  console.log("Query String: ", request.query); // { color: "black" }
-
   // try to do this code, but if it errors, instead of crashing the server, stop, and move to the catch
   try {
-    const cats = await Cat.find(request.query);
+    const cats = await Cat.find(request.query); // e.g. { location: "Liverpool" }
     response.status(200).json(cats);
   } catch (error) {
     console.log(error);
@@ -38,7 +36,7 @@ app.post("/cats", async (request, response) => {
   }
 });
 
-// DELETE
+// DELETE e.g localhost:8080/cats/90869868728729
 app.delete("/cats/:id", async (request, response) => {
   try {
     const id = request.params.id;
@@ -46,7 +44,7 @@ app.delete("/cats/:id", async (request, response) => {
     response.status(200).send(deletedCat);
   } catch (error) {
     console.log(error);
-    response.json(error);
+    response.status(500).json(error);
   }
 });
 
