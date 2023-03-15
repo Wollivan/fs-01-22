@@ -33,7 +33,6 @@ function App() {
 
   function handleChange(event) {
     setForm({ ...form, [event.target.name]: event.target.value });
-    console.log(form);
   }
 
   async function handleAddCat(event) {
@@ -72,7 +71,8 @@ function App() {
         return (
           <div key={index}>
             <h3>{cat.name}</h3>
-            <p>{cat.location}</p>
+            <p>Location: {cat.location}</p>
+            <p>Color: {cat.color}</p>
             <span onClick={() => deleteCat(cat._id, cat.name)}>X</span>
           </div>
         );
